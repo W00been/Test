@@ -1,0 +1,58 @@
+#include <iostream>
+#include "Loop.h"
+
+using namespace std;
+
+void Tfor();
+void Twhile();
+void Tdowhile();
+
+
+void Loop() {
+
+
+	//for(초기식, 종결식, 증감식{...}
+	//while(종결식){초기식, 증감식}
+	//do..while while과 비슷, 무조건 최초 한 번은 실행
+
+	Tdowhile();
+
+}
+void Tfor() {
+	//for (int i= 0; i < 5; i++){		
+	//	for (int j = 0; j < 5; j++) {
+	//		cout << "*";
+	//	}
+	//	cout << endl;
+	//}
+
+	for (int i = 10; i > 0; i--) {
+		for (int j = 0; j < i; j++) {
+			cout << "*";
+		}
+		cout << endl;
+	}
+}
+
+void Twhile() {
+	int x = 0;
+	int y = 10;
+	int result = 0;
+
+	while (x <= y) {
+		result += x;
+		x++;
+	}
+	cout << result << endl;
+
+}
+
+void Tdowhile() {
+	int x = 0;
+	bool flag = true;
+	do {
+		cout << "*" << endl;
+		if (x >= 3) flag = false;
+		x++;
+	} while (flag);
+}
